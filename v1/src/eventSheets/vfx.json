@@ -1,0 +1,99 @@
+{
+	"name": "VFX",
+	"events": [
+		{
+			"functionName": "VFX-Rope-Create",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "pOriginX",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 753656817257218
+				},
+				{
+					"name": "pOriginY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 655473478071624
+				},
+				{
+					"name": "pLinkCount",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 431040098550565
+				},
+				{
+					"name": "pRopeLength",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 220339910901577
+				},
+				{
+					"name": "pPreviousRopePartUID",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 844892753546745
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 608546592945431,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_PART_A",
+						"layer": "\"_DEBUG\"",
+						"x": "pOriginX",
+						"y": "pOriginY",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 961679045337776,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 189180219076845,
+							"parameters": {
+								"variable": "pLinkCount",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 806751999623432
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 124288189771349
+						}
+					],
+					"actions": [],
+					"sid": 311939681346556
+				}
+			]
+		}
+	],
+	"sid": 369607451771342
+}

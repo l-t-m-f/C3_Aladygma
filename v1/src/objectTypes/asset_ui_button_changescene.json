@@ -1,0 +1,73 @@
+{
+	"name": "Asset_UI_Button_ChangeScene",
+	"plugin-id": "Sprite",
+	"sid": 115129775014732,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8966932,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 292644,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3148092,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 68,
+						"height": 68,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9448022,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 558081013712155,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

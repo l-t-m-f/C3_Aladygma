@@ -1,0 +1,18 @@
+{
+	"name": "ROPE_PART",
+	"plugin-id": "Sprite",
+	"sid": 554455424330756,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 102553038849690
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Obj_ROPE_PART_A",
+		"Obj_ROPE_PART_B"
+	]
+}

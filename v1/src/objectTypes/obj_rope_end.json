@@ -1,0 +1,50 @@
+{
+	"name": "Obj_ROPE_END",
+	"plugin-id": "Sprite",
+	"sid": 292736189255619,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "PuppetRefUID",
+			"type": "number",
+			"desc": "",
+			"sid": 264806198820196
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 316577090165765
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 35,
+						"height": 35,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5152084,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 555249242685908,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

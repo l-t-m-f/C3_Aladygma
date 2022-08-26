@@ -1,0 +1,111 @@
+{
+	"name": "Asset_Portrait",
+	"plugin-id": "Sprite",
+	"sid": 549856707100773,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 253424875470861
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "pulse",
+			"name": "Pulse"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3518044,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.998046875,
+								0,
+								0.998046875,
+								0.5,
+								0.998046875,
+								0.998046875,
+								0.5,
+								0.998046875,
+								0,
+								0.998046875,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 880944356752035,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 344,
+						"height": 511,
+						"originX": 0.6,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3902262,
+						"collisionPoly": {
+							"points": [
+								0.2841076604554866,
+								0.1926070038910506,
+								0.6,
+								0.0019455252918287938,
+								1,
+								0.14980544747081712,
+								1,
+								0.5,
+								1,
+								0.9785992217898832,
+								0.6,
+								0.9961089494163424,
+								0,
+								0.980544747081712,
+								0.13146169772256727,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 275580921274227,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,294 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 314826378489060
+				}
+			],
+			"actions": [],
+			"sid": 314510606521920
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 917283739541856
+				}
+			],
+			"actions": [],
+			"sid": 210101029801851,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "evaluate-expression",
+							"objectClass": "System",
+							"sid": 827048985124601,
+							"parameters": {
+								"value": "Obj_ROPE_PART_A.Angle = 270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 345549443741231,
+							"parameters": {
+								"seconds": "0.75"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Obj_ROPE_PART_A",
+							"sid": 106105497959383,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 749433783598102
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 356400877807379,
+							"parameters": {
+								"object": "Obj_ROPE_PART_A"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Obj_ROPE_PART_A",
+							"sid": 820590866276090,
+							"parameters": {
+								"instance-variable": "Active"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Obj_ROPE_PART_A",
+							"sid": 256764748076113,
+							"parameters": {
+								"y": "Self.Y+20"
+							}
+						}
+					],
+					"sid": 857940861572838
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Asset_VFX_Particle_1",
+					"sid": 266555099855404
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "Asset_VFX_Particle_1",
+					"sid": 886431755802064,
+					"parameters": {
+						"z": "round(random(-2, 48))"
+					}
+				}
+			],
+			"sid": 785329905598747
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 202433590604419,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 538879336556934,
+					"parameters": {
+						"key": 37
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 387417184851476,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "Asset-Portrait-Mirror",
+							"sid": 250107253006361,
+							"parameters": [
+								"Asset_Portrait.UID",
+								"0"
+							]
+						}
+					],
+					"sid": 583710275064560
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 873722302309306,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 240462099727875,
+					"parameters": {
+						"key": 39
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 475706856025207,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"callFunction": "Asset-Portrait-Mirror",
+							"sid": 763651882542673,
+							"parameters": [
+								"Asset_Portrait.UID",
+								"1"
+							]
+						}
+					],
+					"sid": 197767684860276
+				}
+			]
+		},
+		{
+			"functionName": "Asset-Portrait-Mirror",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "pUID",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 361382511786185
+				},
+				{
+					"name": "pMirror",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 822379693909221
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "Asset_Portrait",
+					"sid": 886685473381596,
+					"parameters": {
+						"unique-id": "pUID"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 232069113863280,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 677866170470721,
+							"parameters": {
+								"variable": "pMirror",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Asset_Portrait",
+							"sid": 674530819520224,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 740710750544784
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 617129950265464
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 243922111545910,
+							"parameters": {
+								"variable": "pMirror",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Asset_Portrait",
+							"sid": 349134483563717,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 966875173154458
+				}
+			]
+		}
+	],
+	"sid": 556351096035885
+}

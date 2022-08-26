@@ -1,0 +1,64 @@
+{
+	"name": "Obj_PUPPET_REF",
+	"plugin-id": "Sprite",
+	"sid": 678056564588682,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 256,
+						"height": 256,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8076976,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.25,
+								"y": 0.125
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.75,
+								"y": 0.125
+							},
+							{
+								"name": "Image Point 3",
+								"x": 0.5,
+								"y": 0.25
+							},
+							{
+								"name": "Image Point 4",
+								"x": 0.125,
+								"y": 0.375
+							},
+							{
+								"name": "Image Point 5",
+								"x": 0.875,
+								"y": 0.375
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 138061054597801,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

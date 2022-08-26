@@ -1,0 +1,957 @@
+{
+	"name": "Character",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Button",
+					"sid": 212891398953421
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Character-Create",
+					"sid": 362824101322586,
+					"parameters": [
+						"300",
+						"0"
+					]
+				}
+			],
+			"sid": 640465373531429
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 570120087737106,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-velocity",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 147033545871881,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "Self.Physics.VelocityX",
+						"y-component": "-240"
+					}
+				}
+			],
+			"sid": 582141568326289
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 455531227466602,
+					"parameters": {
+						"key": 39
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 955010243369654,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force-towards-position",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 225053156548153,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force": "70",
+						"x": "Self.X - 100",
+						"y": "Self.Y",
+						"image-point": "-1"
+					}
+				},
+				{
+					"id": "set-velocity",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 741415979486069,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "-70",
+						"y-component": "Self.Physics.VelocityY"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Asset_Portrait",
+					"sid": 755624761179093,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 349748087481720
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 514712526446304,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 894707205137270,
+					"parameters": {
+						"key": 37
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force-towards-position",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 744178101259937,
+					"disabled": true,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force": "70",
+						"x": "Self.X + 100",
+						"y": "Self.Y",
+						"image-point": "-1"
+					}
+				},
+				{
+					"id": "set-velocity",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 299466759232661,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "70",
+						"y-component": "Self.Physics.VelocityY"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Asset_Portrait",
+					"sid": 526851333288648,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 612932028350950
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 620758110376679,
+					"parameters": {
+						"key": 39
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 394988541809631,
+					"parameters": {
+						"key": 37
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-velocity",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 610298188052504,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "0",
+						"y-component": "0"
+					}
+				}
+			],
+			"sid": 658259504188152
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "ROPE_PART",
+					"sid": 388279888615297
+				}
+			],
+			"actions": [
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "ROPE_PART",
+					"sid": 362777950139823,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Obj_FLOOR",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "ROPE_PART",
+					"sid": 501073935694607,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "ROPE_PART",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "ROPE_PART",
+					"sid": 897254121878301,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Obj_ROPE_START",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "ROPE_PART",
+					"sid": 631498393331648,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Obj_ROPE_END",
+						"state": "disable"
+					}
+				}
+			],
+			"sid": 370395523746389
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 750657615647228
+				}
+			],
+			"actions": [],
+			"sid": 349700953743649,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 409897161647837,
+							"parameters": {
+								"object": "Obj_PUPPET_REF"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 270880049807873,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-comparison",
+									"objectClass": "System",
+									"sid": 213606232143539,
+									"parameters": {
+										"object": "Obj_ROPE_END",
+										"expression": "Obj_ROPE_END.PuppetRefUID",
+										"comparison": 0,
+										"value": "Obj_PUPPET_REF.UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Obj_PUPPET_REF",
+									"sid": 338095314972121,
+									"parameters": {
+										"x": "lerp(Self.X, Obj_ROPE_END.X, 0.2)",
+										"y": "lerp(Self.Y, Obj_ROPE_END.Y, 0.5)"
+									}
+								}
+							],
+							"sid": 937230099520480
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "character__SPAWN_OFFSET",
+			"type": "number",
+			"initialValue": "640",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 810188148607515
+		},
+		{
+			"functionName": "Character-Create",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "pOriginX",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 485046422105149
+				},
+				{
+					"name": "pOriginY",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 931839791351606
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 771284948780828,
+					"parameters": {
+						"object-to-create": "Obj_PUPPET_REF",
+						"layer": "0",
+						"x": "pOriginX",
+						"y": "pOriginY+character__SPAWN_OFFSET",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"type": "comment",
+					"text": "Center rope"
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 275083190285861,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_START",
+						"layer": "0",
+						"x": "pOriginX",
+						"y": "pOriginY",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 338352923888902,
+					"parameters": {
+						"instance-variable": "PuppetRefUID",
+						"value": "Obj_PUPPET_REF.UID"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 430626847790035,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_END",
+						"layer": "0",
+						"x": "pOriginX",
+						"y": "pOriginY+character__SPAWN_OFFSET",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Obj_ROPE_END",
+					"sid": 118503446682727,
+					"parameters": {
+						"instance-variable": "PuppetRefUID",
+						"value": "Obj_PUPPET_REF.UID"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 431087835503800,
+					"parameters": {
+						"child": "Obj_ROPE_END",
+						"transform-x": false,
+						"transform-y": false,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"callFunction": "Character-CreateRope",
+					"sid": 884316197913528,
+					"parameters": [
+						"round(Obj_ROPE_END.Y/15)",
+						"Obj_ROPE_START.UID",
+						"Obj_ROPE_END.UID"
+					]
+				},
+				{
+					"type": "comment",
+					"text": "Left rope"
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 439708458276121,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_START",
+						"layer": "0",
+						"x": "pOriginX-80",
+						"y": "pOriginY",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 962643560022106,
+					"parameters": {
+						"instance-variable": "PuppetRefUID",
+						"value": "Obj_PUPPET_REF.UID"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 830437960430188,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_END",
+						"layer": "0",
+						"x": "pOriginX-80",
+						"y": "pOriginY+character__SPAWN_OFFSET",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Obj_ROPE_END",
+					"sid": 617715305244726,
+					"parameters": {
+						"instance-variable": "PuppetRefUID",
+						"value": "Obj_PUPPET_REF.UID"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 569152515893844,
+					"parameters": {
+						"child": "Obj_ROPE_END",
+						"transform-x": false,
+						"transform-y": false,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"callFunction": "Character-CreateRope",
+					"sid": 124473827357189,
+					"parameters": [
+						"round(Obj_ROPE_END.Y/15)",
+						"Obj_ROPE_START.UID",
+						"Obj_ROPE_END.UID"
+					]
+				},
+				{
+					"type": "comment",
+					"text": "Right rope"
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 505897301860511,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_START",
+						"layer": "0",
+						"x": "pOriginX+80",
+						"y": "pOriginY",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 787641016750789,
+					"parameters": {
+						"instance-variable": "PuppetRefUID",
+						"value": "Obj_PUPPET_REF.UID"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 862988604888626,
+					"parameters": {
+						"object-to-create": "Obj_ROPE_END",
+						"layer": "0",
+						"x": "pOriginX+80",
+						"y": "pOriginY+character__SPAWN_OFFSET",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Obj_ROPE_END",
+					"sid": 241872752576217,
+					"parameters": {
+						"instance-variable": "PuppetRefUID",
+						"value": "Obj_PUPPET_REF.UID"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 241228025994524,
+					"parameters": {
+						"child": "Obj_ROPE_END",
+						"transform-x": false,
+						"transform-y": false,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"callFunction": "Character-CreateRope",
+					"sid": 605599947149904,
+					"parameters": [
+						"round(Obj_ROPE_END.Y/15)",
+						"Obj_ROPE_START.UID",
+						"Obj_ROPE_END.UID"
+					]
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Obj_PUPPET_REF",
+					"sid": 350472860969181,
+					"parameters": {
+						"object": "Asset_Portrait",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Obj_PUPPET_REF",
+					"sid": 577941046818700,
+					"parameters": {
+						"child": "Asset_Portrait",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				}
+			],
+			"sid": 350102905864287
+		},
+		{
+			"functionName": "Character-CreateRope",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "pRopeLength",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 444048215759466
+				},
+				{
+					"name": "pStartObjectUID",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 755043095440936
+				},
+				{
+					"name": "pEndObjectUID",
+					"type": "number",
+					"initialValue": "-1",
+					"comment": "",
+					"sid": 815786448744929
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "Obj_ROPE_START",
+					"sid": 160195171097809,
+					"parameters": {
+						"unique-id": "pStartObjectUID"
+					}
+				},
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "Obj_ROPE_END",
+					"sid": 317390760280613,
+					"parameters": {
+						"unique-id": "pEndObjectUID"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 556687739308189,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 940551233239337,
+							"parameters": {
+								"name": "\"i\"",
+								"start-index": "1",
+								"end-index": "pRopeLength"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 741092528931570,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 218951732610631,
+									"parameters": {
+										"value": "loopindex(\"i\") = 1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Obj_ROPE_START",
+									"sid": 882695823366395,
+									"parameters": {
+										"object": "Obj_ROPE_PART_A",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "create-revolute-joint",
+									"objectClass": "Obj_ROPE_START",
+									"sid": 441394996200780,
+									"behaviorType": "Physics",
+									"parameters": {
+										"this-image-point": "-1",
+										"object": "Obj_ROPE_PART_A"
+									}
+								}
+							],
+							"sid": 641277164904760
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 662062125469034
+								},
+								{
+									"id": "evaluate-expression",
+									"objectClass": "System",
+									"sid": 487965284471322,
+									"parameters": {
+										"value": "loopindex(\"i\") = pRopeLength"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 454239322426779,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "evaluate-expression",
+											"objectClass": "System",
+											"sid": 907381125369871,
+											"parameters": {
+												"value": "loopindex(\"i\")%2 = 0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 684113448830849,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-last-created",
+													"objectClass": "System",
+													"sid": 514329766163877,
+													"parameters": {
+														"object": "Obj_ROPE_PART_A"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position-to-another-object",
+													"objectClass": "Obj_ROPE_END",
+													"sid": 411589343241635,
+													"parameters": {
+														"object": "Obj_ROPE_PART_A",
+														"image-point-optional": "1"
+													}
+												},
+												{
+													"id": "create-revolute-joint",
+													"objectClass": "Obj_ROPE_END",
+													"sid": 478774932415379,
+													"behaviorType": "Physics",
+													"parameters": {
+														"this-image-point": "-1",
+														"object": "Obj_ROPE_PART_A"
+													}
+												}
+											],
+											"sid": 214286243380010
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 187248476848288
+										}
+									],
+									"actions": [],
+									"sid": 947030853920842,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-last-created",
+													"objectClass": "System",
+													"sid": 507672472199795,
+													"parameters": {
+														"object": "Obj_ROPE_PART_B"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position-to-another-object",
+													"objectClass": "Obj_ROPE_END",
+													"sid": 872424320844986,
+													"parameters": {
+														"object": "Obj_ROPE_PART_B",
+														"image-point-optional": "1"
+													}
+												},
+												{
+													"id": "create-revolute-joint",
+													"objectClass": "Obj_ROPE_END",
+													"sid": 884102560816870,
+													"behaviorType": "Physics",
+													"parameters": {
+														"this-image-point": "-1",
+														"object": "Obj_ROPE_PART_B"
+													}
+												}
+											],
+											"sid": 186856374979453
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 719833338259170
+								}
+							],
+							"actions": [],
+							"sid": 877050643360963,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "evaluate-expression",
+											"objectClass": "System",
+											"sid": 998361177141793,
+											"parameters": {
+												"value": "loopindex(\"i\")%2 = 0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 402316336907032,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-last-created",
+													"objectClass": "System",
+													"sid": 150421565804176,
+													"parameters": {
+														"object": "Obj_ROPE_PART_A"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Obj_ROPE_PART_A",
+													"sid": 657482803090983,
+													"parameters": {
+														"object": "Obj_ROPE_PART_B",
+														"layer": "1",
+														"image-point": "1",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "create-revolute-joint",
+													"objectClass": "Obj_ROPE_PART_A",
+													"sid": 693579953989462,
+													"behaviorType": "Physics",
+													"parameters": {
+														"this-image-point": "1",
+														"object": "Obj_ROPE_PART_B"
+													}
+												}
+											],
+											"sid": 975066792889211
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 515471349493295
+										}
+									],
+									"actions": [],
+									"sid": 278463167596812,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "pick-last-created",
+													"objectClass": "System",
+													"sid": 312007806471725,
+													"parameters": {
+														"object": "Obj_ROPE_PART_B"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "spawn-another-object",
+													"objectClass": "Obj_ROPE_PART_B",
+													"sid": 370261199883811,
+													"parameters": {
+														"object": "Obj_ROPE_PART_A",
+														"layer": "1",
+														"image-point": "1",
+														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "create-revolute-joint",
+													"objectClass": "Obj_ROPE_PART_B",
+													"sid": 257870943802126,
+													"behaviorType": "Physics",
+													"parameters": {
+														"this-image-point": "1",
+														"object": "Obj_ROPE_PART_A"
+													}
+												}
+											],
+											"sid": 414487634907868
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 532116216551651
+}

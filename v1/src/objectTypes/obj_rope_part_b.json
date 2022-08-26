@@ -1,0 +1,51 @@
+{
+	"name": "Obj_ROPE_PART_B",
+	"plugin-id": "Sprite",
+	"sid": 746996168781879,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Active",
+			"type": "boolean",
+			"desc": "",
+			"sid": 443859486358441
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 9,
+						"height": 19,
+						"originX": 0.5,
+						"originY": 0.13157894736842105,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1145948,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5,
+								"y": 0.8421052631578947
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 918112873850654,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
